@@ -59,7 +59,7 @@ def cat_dog(photo):
         np.set_printoptions(suppress=True)
         model_path = "cat_dog_model.h5"
         if not os.path.exists(model_path):
-            url = "https://drive.google.com/uc?export=download&id=FILE_ID"
+            url = "https://drive.google.com/uc?export=download&id=FILE_ID&confirm=t"
             gdown.download(url, model_path, quiet=False)
         model = load_model(model_path, compile=False)
         image = Image.open(photo).convert("RGB")
